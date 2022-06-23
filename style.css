@@ -1,0 +1,55 @@
+body{
+    width:375px;
+    height:100%;
+    margin: 0 auto;
+}
+
+.topo{
+    width:375px;
+    height:80px;
+    position: relative;
+    top:0px;
+    left:0px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.topo img:first-child{
+    width:75px;
+    height: 53px;
+    position: absolute;
+    top: 16px;
+    left: 22px;
+}
+
+.topo img:last-child{
+    width:45px;
+    height: 45px;
+    position: absolute;
+    top: 18px;
+    right: 17px;
+}
+
+.rodape{
+    width:375px;
+    height:80px;
+    position:fixed;
+    bottom:0px;
+    margin: 0 auto;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.rodape img{
+    position:absolute;
+    bottom: 27px;
+    right:18px;
+}
+
+.areaChat{
+    background: #E5E5E5;
+    position: absolute;
+    width:375px;
+    bottom:80px;
+    top:80px;
+    margin: auto 0;
+}

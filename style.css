@@ -2,6 +2,7 @@ body{
     width:375px;
     height:100%;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .topo{
@@ -15,16 +16,12 @@ body{
 }
 
 .topo img:first-child{
-    width:75px;
-    height: 53px;
     position: absolute;
     top: 16px;
     left: 22px;
 }
 
 .topo img:last-child{
-    width:45px;
-    height: 45px;
     position: absolute;
     top: 18px;
     right: 17px;
@@ -52,4 +49,17 @@ body{
     bottom:80px;
     top:80px;
     margin: auto 0;
+}
+
+input{
+    height:100%;
+    width: 100%;
+    border: none;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
 }

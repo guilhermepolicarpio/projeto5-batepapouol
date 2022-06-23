@@ -40,5 +40,20 @@ function manterOnline(){
     const requisicao = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", envioNome);
 }
 
+function buscarMensagens(){
+    const promise = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
+    promise.then(exibirMensagens);
+}
+
+function exibirMensagens(sucesso){
+
+    let adicionarMensagem="";
+
+    for(let i=0; i<sucesso.data.length;i++){
+        adicionarMensagem += `<div class`
+
+    }
+}
+
 entrada();
 setInterval(manterOnline,5000);

@@ -25,7 +25,7 @@ function entrada(){
     //Requisição validada com sucesso
     promise.then(sucesso);
     //Requisição com erro
-    promise.catch(erro);    
+    promise.catch(erro);
 }
 
 //Função para mostrar no console que a requisição foi enviada e validada com sucesso
@@ -54,7 +54,8 @@ function buscarMensagens(){
     promise.catch(erro);
 }
 
-//Recebe o argumento da função buscar mensagens, puxa do servidor os dados conforme o tamanho e escreve no HTML dinamicamente 
+//Recebe o argumento da função buscar mensagens, puxa do servidor os dados conforme o tamanho e escreve no HTML dinamicamente.Conforme o tipo
+//de ação, entra em cada if/else.
 function exibirMensagens(sucesso){
 
     let adicionarMensagem="";
@@ -81,7 +82,7 @@ function exibirMensagens(sucesso){
 
         else if(sucesso.data[i].type==="private_message"){
             adicionarMensagem += 
-            `<div class = "private-message mensagem" data-identifier="message">
+            `<div class = "private_message mensagem" data-identifier="message">
                  <span class="horario">  ${sucesso.data[i].time}     </span>
                  <span class="de">    ${sucesso.data[i].from}      </span>
                  reservadamente para
@@ -95,9 +96,13 @@ function exibirMensagens(sucesso){
     mensagens.innerHTML = adicionarMensagem;
 
     const novaMsg = document.querySelectorAll('.mensagem');
-    novaMsg[novaMsg-1].scrollIntoView();
+    novaMsg[novaMsg.length-1].scrollIntoView();
 }
-
+//Chama a função que pergunta e envia o nome de usuário para o servidor
 entrada();
+
+//Chama a função que avisa o servidor a cada 5s que o usuário está online
 setInterval(manterOnline,5000);
+
+//Atualiza o feed de mensagens chamando a função a cada 3s.
 setInterval(buscarMensagens,3000);

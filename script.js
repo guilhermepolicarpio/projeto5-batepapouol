@@ -33,7 +33,7 @@ function sucesso(){
     if(sucesso.status === 200){
         console.log("deu bom");
        }
-}
+    }
 
 //Função para identificação e tratamento de erros
 function erro(error){
@@ -71,7 +71,7 @@ function exibirMensagens(sucesso){
         }
         else if(sucesso.data[i].type==="message"){
             adicionarMensagem += 
-            `<div class = "message mensagem" data-identifier="message">
+            `<div class = "message mensagem">
                  <span class="horario">  ${sucesso.data[i].time}     </span>
                  <span class="de">    ${sucesso.data[i].from}      </span>
                  para
@@ -82,7 +82,7 @@ function exibirMensagens(sucesso){
 
         else if(sucesso.data[i].type==="private_message"){
             adicionarMensagem += 
-            `<div class = "private_message mensagem" data-identifier="message">
+            `<div class = "private_message mensagem">
                  <span class="horario">  ${sucesso.data[i].time}     </span>
                  <span class="de">    ${sucesso.data[i].from}      </span>
                  reservadamente para
@@ -97,6 +97,27 @@ function exibirMensagens(sucesso){
 
     const novaMsg = document.querySelectorAll('.mensagem');
     novaMsg[novaMsg.length-1].scrollIntoView();
+}
+
+function enviarMensagem(){
+    const mensagem = document.querySelector("input").value;
+
+    const objetoMensagem ={
+        from: nome,
+        to: "todos",
+        text: mensagem,
+        type: "message"
+    }
+
+    const promise = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", objetoMensagem);
+
+    promise.then(buscarMensagens);
+
+    limparCampo();
+}
+
+function limparCampo(){
+    document.getElementById('campo').value='';
 }
 //Chama a função que pergunta e envia o nome de usuário para o servidor
 entrada();

@@ -1,9 +1,13 @@
 body{
     width:375px;
-    height:100%;
+    height:667px;
     margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;   
 }
+
+* {
+	box-sizing: border-box;
+  }
 
 .topo{
     width:375px;
@@ -28,7 +32,7 @@ body{
 }
 
 .rodape{
-    width:380px;
+    width:375px;
     height:80px;
     position:fixed;
     bottom:0px;
@@ -45,9 +49,11 @@ body{
     cursor:pointer;
 }
 
+.telaChat{
+    height:667px;
+}
 
-
-input{
+.telaChat input{
     height:100%;
     width: 100%;
     border: none;
@@ -68,9 +74,9 @@ input{
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    display: inline-block;
+    display: flex;
     align-items: center;
-    padding: 6px 0 6px 8px;
+    flex-wrap: wrap;
 }
 
 .status{
@@ -94,9 +100,64 @@ input{
 
 .texto{
     word-break: break-word;
-    width:100%;
 }
 
+.tp{ 
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight:bold;
+    color: black;
+}
 .areaChat{
-    margin-bottom: 80px;
+    padding-bottom: 80px;
+    background: #E5E5E5;
+}
+
+.areaChat div{
+    height:45px;
+    margin-bottom: 4px;
+}
+
+.telaInicial{
+    border: 1px solid black;
+}
+
+.telaInicial img{
+    padding: 80px 150px 80px 150px;
+}
+
+.telaInicial input{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    height: 27px;
+}
+
+.telaInicial div{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+}
+
+.nomeTelaInicial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao{
+    display: flex;
+    margin: 25px auto;
+}
+
+.hidden{
+    display:none;
+}
+
+.telaInicial button{
+    display:flex;
+    margin:0 auto;
+    text-align: center;
+    margin-top:24px;
+    margin-bottom: 100%;
 }

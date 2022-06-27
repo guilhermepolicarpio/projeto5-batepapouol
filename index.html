@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
@@ -13,22 +13,29 @@
 </head>
 <body>
 
-
-    
-    <div class="topo">
+    <div class="telaInicial">
         <img src="imagens/logo 1.png">
-        <img src="imagens/Vector (1).png">
+        <input class="nomeTelaInicial"  placeholder="Digite seu nome"> 
+        <button onclick="enviarNome()"> Enviar</button>  
+        <div></div>
     </div>
 
-    <div class="areaChat">
-    </div>
+    <div class="telaChat hidden">
+        <div class="topo">
+            <img src="imagens/logo 1.png">
+            <img src="imagens/Vector (1).png">
+        </div>
 
-    <div class="rodape">
-        <input id="campo" placeholder="Escreva aqui...">
-        <img class="msg"onclick="enviarMensagem(this)" src="imagens/Vector (2).png">
-    </div>
+        <div class="areaChat">
+        </div>
 
+        <div class="rodape">
+            <input id="campo" placeholder="Escreva aqui...">
+            <img class="msg" onclick="enviarMensagem(this)" src="imagens/Vector (2).png">
+        </div>
+
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
